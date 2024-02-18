@@ -35,3 +35,8 @@ def main(playwright: Playwright):
 
 with sync_playwright() as playwright:
     main(playwright)
+ img_element =await page.wait_for_selector("#islrg > div.islrc > div:nth-child(2) > a.FRuiCf.islib.nfEiy > div.fR600b.islir > img")
+
+    if img_element:
+        src_va =await img_element.get_attribute("src")
+        print(src_va)
